@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: firebrick;
+    padding: 3%;
+    text-align: center;
+    color: aliceblue;
+}
+
+main{
+    margin-top: 40px;
+    padding: 50px;
+    justify-content: center;
+    justify-items: center;
+    width: center;
+}
+
+section{
+    margin: 40px;
+    border-left: 4px solid firebrick;
+    padding: 50px;
+}
+
+form{
+    padding: 10px;
+
+}
+
+label,input{ 
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+
+
+}
+
+h2{ 
+    text-align: center;
+    color: rgb(250, 246, 246);
+}
+
+
+/* Importamos tipografías: 'Syne' para la vibra urbana con personalidad y 'Outfit' para una estética limpia */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Syne:wght@700;800&display=swap');
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+/* Fondo animado con degradado multicolor de tonos pastel (Melocotón, Lavanda, Menta y Rosa) */
+background-color: #00d9ff31;
+background-size: 400% 400%;
+animation: gradientBG 8s ease infinite;
+color: #67569b;
+font-family: 'Outfit', sans-serif;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+overflow-x: hidden;
+}
+
+/* ANIMACIONES KEYFRAMES */
+
+/* 1. Fondo vivo multicolor en constante movimiento */
+@keyframes gradientBG {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+
+/* 2. Entrada elástica tipo Sticker */
+@keyframes popIn {
+0% {
+opacity: 0;
+transform: translateY(40px) scale(0.9) rotate(-1deg);
+}
+100% {
+opacity: 1;
+transform: translateY(0) scale(1) rotate(0deg);
+}
+}
+
+/* 3. Movimiento flotante relajado */
+@keyframes softFloat {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-8px); }
+}
+
+/* ESTILOS DE COMPONENTES */
+
+header {
+width: 100%;
+background: rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(10px);
+padding: 25px;
+text-align: center;
+border-bottom: 3px dashed #181515; /* Detalle de costura magenta pastel */
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+header h1 {
+font-family: 'Syne', sans-serif;
+font-size: 2.3rem;
+/* Texto con degradado multicolor pastel */
+background: linear-gradient(90deg, #70d2ff, #020202, #ff7070);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-transform: lowercase;
+letter-spacing: -1px;
+}
+
+main {
+width: 90%;
+max-width: 440px;
+margin-top: 45px;
+margin-bottom: 45px;
+}
+
+section {
+/* Efecto cristal (Glassmorphism) con fondo blanco semi-transparente */
+background: rgba(255, 255, 255, 0.85);
+backdrop-filter: blur(12px);
+padding: 40px 35px;
+border-radius: 24px;
+border: 2px solid #ffffff;
+/* Sombra tricolor pastel */
+box-shadow: 0 20px 40px rgba(187, 143, 206, 0.2),
+-10px -10px 30px rgba(255, 182, 193, 0.25);
+
+/* Animación de entrada y flotación */
+animation: popIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+softFloat 5s ease-in-out infinite 0.8s;
+}
+
+h2 {
+font-family: 'Syne', sans-serif;
+text-align: center;
+color: #dd5b5b80; /* Violeta pastel con carácter urbano */
+font-size: 1.6rem;
+margin-bottom: 25px;
+font-weight: 800;
+}
+
+form {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+label {
+font-weight: 600;
+font-size: 0.9rem;
+color: #8c7a9c;
+letter-spacing: 0.5px;
+text-transform: uppercase;
+}
+
+input[type="text"] {
+width: 100%;
+padding: 15px 18px;
+background-color: rgba(255, 255, 255, 0.9);
+border: 2px solid #e2d4f0; /* Borde lavanda suave */
+color: #3b3a3e;
+font-family: 'Outfit', sans-serif;
+font-size: 1rem;
+outline: none;
+border-radius: 14px;
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Al escribir, se activa un resplandor de menta pastel */
+input[type="text"]:focus {
+border-color: #9bf6ff;
+background-color: #ffffff;
+box-shadow: 0 0 0 4px rgba(155, 246, 255, 0.5),
+0 8px 20px rgba(155, 246, 255, 0.2);
+transform: scale(1.01);
+}
+
+/* BOTÓN URBAN PASTEL MULTICOLOR */
+input[type="button"] {
+width: 100%;
+padding: 16px;
+margin-top: 10px;
+/* Degradado vivo pastel: Rosa a Violeta */
+background: linear-gradient(135deg, #ff9ebb, #b39ddb);
+color: #ffffff;
+font-family: 'Outfit', sans-serif;
+font-weight: 700;
+font-size: 1.1rem;
+border: none;
+cursor: pointer;
+border-radius: 14px;
+letter-spacing: 1px;
+text-transform: uppercase;
+/* Sombra del botón en tono magenta suave */
+box-shadow: 0 10px 25px rgba(255, 158, 187, 0.45);
+
+transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Efecto Hover: El botón se ilumina en amarillo/menta pastel y gira suavemente */
+input[type="button"]:hover {
+background: linear-gradient(135deg, #ffb3c6, #90e0ef);
+transform: translateY(-5px) rotate(-1.5deg) scale(1.02);
+box-shadow: 0 15px 30px rgba(144, 224, 239, 0.5);
+color: #2b2b2b;
+}
+
+/* Efecto al presionar */
+input[type="button"]:active {
+transform: translateY(2px) rotate(0deg) scale(0.98);
+box-shadow: 0 5px 12px rgba(255, 158, 187, 0.3);
+}
+
